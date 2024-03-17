@@ -1,6 +1,6 @@
 ///test unitario
 
-const SessionService = require('./session-service');
+const SessionService = require('../../../src/services/session-service');
 const jwt = require('jsonwebtoken');
 
 jest.mock('jsonwebtoken');
