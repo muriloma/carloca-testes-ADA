@@ -4,7 +4,15 @@ exports.req = {
     'success': {
         body: {
             name: faker.name.fullName(),
-            email: faker.internet.email(),
+            email: 'any@mail.com',
+            password: faker.internet.password()
+
+        }
+    },
+    'invalid-email': {
+        body: {
+            name: faker.name.fullName(),
+            email: 'invalid.email.com',
             password: faker.internet.password()
 
         }
