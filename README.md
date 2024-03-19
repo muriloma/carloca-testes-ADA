@@ -18,6 +18,34 @@ Os testes de integração para o fluxo de criação de usuários garantem a inte
 
 - **Services**: Assegurar que os serviços de criação de usuários executem corretamente suas funcionalidades, incluindo validação de dados, criptografia de senhas e persistência adequada no banco de dados.
 
+## Configurando Permissões de Acesso no MongoDB Cloud
+
+Este guia fornece instruções sobre como configurar as permissões de acesso à rede no MongoDB Cloud para permitir que IPs específicos acessem o seu cluster MongoDB.
+
+### Passo a Passo
+
+1. **Acesse a Lista de Acesso à Rede no MongoDB Cloud**:
+   - Acesse [este link](https://cloud.mongodb.com/v2/65f752167756c2746d46b92c#/security/network/accessList).
+
+2. **Faça Login na sua Conta MongoDB**:
+   - Se você ainda não estiver logado, será solicitado a fazer login na sua conta MongoDB. 
+
+   ![Tela de Login](assets/tela_login.png)
+
+3. **Adicione o IP do Usuário à Lista de Acesso**:
+   - Na página de Lista de Acesso à Rede, clique em "Add IP Address" ou similar.
+
+    ![Adicionar IP](assets/adicionar_ip.png)
+
+   - Insira o endereço IP específico que você deseja permitir o acesso ao seu cluster MongoDB.
+   - Salve as alterações.
+
+   ![Confirmar IP](assets/confirmar_ip.png)
+
+### Observações
+- Certifique-se de ter permissões adequadas para acessar e modificar as configurações de rede do seu projeto MongoDB.
+- Repita este processo para adicionar múltiplos IPs, se necessário.
+
 ## Considerações Adicionais
 
 - **Testes E2E**: A inclusão de testes end-to-end (E2E) é apreciada por garantir uma cobertura mais abrangente do sistema, verificando o fluxo completo de sessão e criação de usuários.
